@@ -1,5 +1,7 @@
 FROM python
 COPY ./app.py ./app.py
-Expose 8087
-RUN pip install Pystrich
+
+RUN pip install -r requirements.txt
+
+Expose 9001
 CMD [ "python" , "-u" , "app.py" ]
