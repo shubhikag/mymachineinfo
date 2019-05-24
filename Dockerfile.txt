@@ -1,0 +1,5 @@
+FROM python
+COPY machineinfo.py
+Expose 8080
+RUN pip install Pystrich
+CMD [ "python" , "-u" , "machineinfo.py" ]
