@@ -1,5 +1,5 @@
 FROM python
-COPY ./appy.py ./appy.py
+COPY ./app.py ./app.py
 Expose 8087
 RUN pip install Pystrich
-CMD [ "python" , "-u" , "appy.py" ]
+CMD [ "python" , "-u" , "app.py" ]
