@@ -1,7 +1,11 @@
 FROM python
-COPY ./app.py ./app.py
-COPY ./requirements.txt ./requirements.txt
+
+COPY . /demo
+
+WORKDIR /demo
+
 RUN pip install -r requirements.txt
 
-Expose 9001
-CMD [ "python" , "-u" , "app.py" ]
+EXPOSE 9000
+
+CMD python ./app.py
